@@ -48,6 +48,7 @@ body, input{
     display: grid;
     grid-template-columns: 1fr;
     z-index: 5;
+    transition: 1s 0.7s ease-in-out;
 }
 
 form{
@@ -59,6 +60,7 @@ form{
     overflow: hidden;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    transition: 0.2s 0.7s ease-in-out;
 }
 
 form.sign-in-form{
@@ -190,6 +192,7 @@ title{
 
 .panel .content{
     color: #fff;
+    transition: .9s .6s ease-in-out;
 }
 
 .panel h3{
@@ -215,9 +218,93 @@ title{
 
 .image{
     width: 100%;
+    transition: 1.1s .4s ease-in-out;
 }
 
 .right-panel .content, .right-panel .image{
     transform: translateX(800px);
+}
 
+.container.sign-up-mode:before{
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.container.sign-up-mode .left-panel .image, .container.sign-up-mode .left-panel .content{
+    transform: translateX(-800px);
+}
+
+.container.sign-up-mode .right-panel .content, .container.sign-up-mode .right-panel .image{
+    transform: translateX(0px);
+}
+
+.container.sign-up-mode .left-panel{
+    pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel{
+    pointer-events: all;
+}
+
+.container.sign-up-mode .signin-signup{
+    left: 25%;
+}
+
+.container.sign-up-mode form.sign-in-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+.container.sign-up-mode form.sign-up-form{
+    z-index: 2;
+    opacity: 1;
+}
+
+@media(max-width: 870px){
+    .container{
+        min-height: 800px;
+        height: 100vh;
+
+    }
+
+    .container:before{
+        display: none;
+    }
+
+    .signin-signup{
+        width: 100%;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+    }
+
+    .panels-container{
+        background-color: green;
+        z-index: 10;
+        grid-template-columns: lfr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .panel{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+    }
+
+    .image{
+        width: 200px;
+    }
+
+    .left-panel{
+        grid-row: 1 / 2;
+    }
+
+    .right-panel{
+        grid-row: 3 / 4;
+    }
+
+    .right-panel .content, .right-panel .image{
+        transform: translateX(0px);
+    }
 }
