@@ -35,6 +35,7 @@ body, input{
     transition: 1.8s ease-in-out;
 }
 
+/* Define the forms container for the page*/
 .forms-container{
     position: absolute;
     width: 100%;
@@ -43,6 +44,7 @@ body, input{
     left: 0;
 }
 
+/* Setting the main form layout */
 .signin-signup{
     position: absolute;
     top: 50%;
@@ -55,6 +57,7 @@ body, input{
     transition: 1s 0.7s ease-in-out;
 }
 
+/* Defining the general form properties */
 form{
     display: flex;
     align-items: center;
@@ -67,6 +70,7 @@ form{
     transition: 0.2s 0.7s ease-in-out;
 }
 
+/* Setting the z-index for the sign-in and sign-up forms */
 form.sign-in-form{
     z-index: 2;
 }
