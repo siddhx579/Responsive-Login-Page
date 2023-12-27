@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+/*Reset CSS style*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Set the Poppins font for the body and input elements*/
 body, input{
     font-family: 'Poppins', sans-serif;
 }
 
+/* Define the main container for the page*/
 .container{
     position: relative;
     width: 100%;
@@ -18,6 +21,7 @@ body, input{
     overflow: hidden;
 }
 
+/* Add a circular shape to the container*/
 .container:before{
     content: '';
     position: absolute;
